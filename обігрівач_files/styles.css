@@ -9,6 +9,16 @@
     padding: 10px;
   }
 }
+@media (max-width: 768px) {
+  /* Наприклад, зменшити розмір шрифтів або адаптувати контейнери */
+  body {
+    font-size: 16px;
+  }
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+}
 
 @font-face {
     font-family: 'SegoeUI';
@@ -56,6 +66,11 @@ body {
 	margin: 0 auto;
 	width: 480px;
 	background: #fff;
+}
+.container {
+  width: 100%;
+  max-width: 1200px; /* Максимальна ширина для великих екранів */
+  margin: 0 auto;
 }
 
 section {
