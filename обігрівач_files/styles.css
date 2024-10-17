@@ -31,6 +31,10 @@
 
 
 
+img {
+    display: block; /* Убере пробіли під зображенням */
+}
+
 .list_item {
 	display: flex; /* Додаємо флекс-контейнер для вирівнювання */
 	align-items: center; /* Вертикальне вирівнювання по центру */
@@ -57,9 +61,10 @@
 
 
 
-body {
+
+  body {
     margin: 0;
-    padding: 0 18px;
+    padding: 0;
     box-sizing: border-box;
     max-width: 100vw;
     overflow-x: hidden;
