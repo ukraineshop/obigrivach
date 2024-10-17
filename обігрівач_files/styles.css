@@ -44,7 +44,16 @@
 	margin-right: 15px; /* Відступ між зображенням та текстом */
   }
   
+.image_wrapper {
+    display: flex;
+    justify-content: center; /* Центрує зображення по горизонталі */
+    align-items: center; /* Центрує зображення по вертикалі */
+}
 
+.image_wrapper img {
+    max-width: 100%; /* Робить зображення адаптивними */
+    height: auto; /* Зберігає пропорції */
+}
 
 
 body {
