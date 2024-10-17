@@ -30,15 +30,44 @@
 /* styles */
 
 
-
-img {
-    display: block; /* Убере пробіли під зображенням */
+body {
+	min-width: 480px;
+	background: #eee;
+	font-family: 'AvenirNextCyr', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	color: #333;
+	cursor: default;
 }
 
-.list_item {
-	display: flex; /* Додаємо флекс-контейнер для вирівнювання */
-	align-items: center; /* Вертикальне вирівнювання по центру */
-  }
+.main_wrapper {
+	margin: 0 auto;
+	width: 480px;
+	background: #fff;
+}
+
+section {
+	padding: 30px 0;
+}
+
+section.dark_theme {
+	background: #4b4b4b;
+	color: #fff;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+
   
   .circle-image img {
 	width: 110px; /* Встановіть потрібний розмір */
@@ -62,23 +91,7 @@ img {
 
 
 
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    max-width: 100vw;
-    overflow-x: hidden;
-}
-body {
-	min-width: 480px;
-	background: ffffff;
-	font-family: 'AvenirNextCyr', sans-serif;
-	font-weight: 400;
-	font-size: 1.1rem;
-	line-height: 24px;
-	color: #262626;
-	cursor: default;
-}
+
 nav{
     padding: 0;
     margin: 0;
