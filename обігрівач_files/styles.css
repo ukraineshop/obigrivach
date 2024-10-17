@@ -46,12 +46,20 @@
   
 
 
+
+body {
+    margin: 0;
+    padding: 0 18px;
+    box-sizing: border-box;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
 body {
 	min-width: 480px;
-	background-color: #fafafa;
-	font-family: 'SegoeUI', sans-serif;
+	background: ffffff;
+	font-family: 'AvenirNextCyr', sans-serif;
 	font-weight: 400;
-	font-size: 16px;
+	font-size: 1.1rem;
 	line-height: 24px;
 	color: #262626;
 	cursor: default;
