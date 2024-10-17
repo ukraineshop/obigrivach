@@ -133,6 +133,60 @@
 </div>
 </div>
 
+</section>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Використовуємо ID для правильного селектора
+      document.querySelector('#order_form1').addEventListener('submit', function(e) {
+          e.preventDefault(); // Запобігаємо стандартній відправці форми
+       
+          // Отримуємо значення полів форми
+          var name = document.querySelector('input[name="name"]').value;
+          var phone = document.querySelector('input[name="phone"]').value;
+          
+          // Формуємо повідомлення
+          var message = `Нове замовлення:\nІм'я та прізвище: ${name} \nТелефон: ${phone};`
+       
+          // Ваш токен та ID чату
+          var token = '7921552696:AAF0TkzjUP5U7kDeESkw-3STSnQ8VCodH2Y';
+          var chatId = 899042767; // Ваш реальний ID чату
+       
+          // Відправляємо повідомлення через Telegram API
+          fetch('https://api.telegram.org/bot' + token + '/sendMessage', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                  chat_id: chatId,
+                  text: message,
+                  parse_mode: "Markdown"
+              })
+          })
+          .then(response => response.json())
+          .then(data => {
+              console.log('Success:', data);
+              // Після успішної відправки, перенаправляємо на сторінку "Дякую"
+              window.location.href = "./обігрівач_files/thank_you_page.html"; 
+          })
+          .catch((error) => {
+              console.error('Error:', error);
+              alert('Помилка при відправленні замовлення.');
+          });
+      });
+  });
+</script>
+<form id="order_form1" class="order_form" method="post">
+  <input type="hidden" name="subid" value="lq1ssb4d8t7">
+  <input type="hidden" name="task" value="process">
+  <input type="hidden" name="country" value="ru">
+  
+  <input class="field" type="text" name="name" placeholder="Введіть Ваше Ім&#39;я" required="">
+  <input class="field" type="tel" name="phone" placeholder="Введіть Ваш телефон" required="">
+  <button class="button">Оформити замовлення </button>
+</form>
+<br>
+
 
 
 <style>
