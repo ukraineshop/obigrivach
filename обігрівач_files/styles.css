@@ -62,11 +62,7 @@ body {
 	cursor: default;
 }
 
-.main_wrapper {
-	margin: 0 auto;
-	width: 480px;
-	background: #fff;
-}
+
 .container {
   width: 100%;
   max-width: 1200px; /* Максимальна ширина для великих екранів */
