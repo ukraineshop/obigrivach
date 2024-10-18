@@ -198,9 +198,9 @@ nav{
 
 
 .main_wrapper {
-	margin: 0 auto;
+	width: fit-content; 
 
-	width: 480px;
+	max-width:480px;
 }
 
 .clearfix:after {
